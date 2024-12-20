@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick Roll</title>
+    <style>
+        body {
+            background-color: #2f2f2f; /* Темно-сірий фон */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        video {
+            width: 80%; /* Ширина відео на 80% від ширини екрану */
+            max-width: 800px; /* Максимальна ширина відео */
+        }
+    </style>
+</head>
+<body>
+    <video id="rickroll" autoplay loop muted>
+        <source src="rigrol.mp4" type="video/mp4">
+        Ваш браузер не підтримує тег відео.
+    </video>
+
+    <script>
+        // Чекаємо на початок відтворення відео, щоб увімкнути звук
+        document.getElementById('rickroll').onplay = function() {
+            this.muted = false; // Вмикаємо звук після початку відтворення
+        };
+    </script>
+</body>
+</html>
